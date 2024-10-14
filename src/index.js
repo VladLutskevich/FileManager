@@ -10,6 +10,7 @@ import { mv } from './mv.js';
 import { rm } from './rm.js';
 import { compress } from './compress.js';
 import { decompress } from './decompress.js';
+import { hash } from './hash.js';
 
 let currentDir;
 
@@ -63,6 +64,10 @@ const onInput = async (data) => {
             break;
         case 'decompress':
             await decompress(currentDir, arg1, arg2);
+            printDir(currentDir);
+            break;
+        case 'hash':
+            await hash(currentDir, arg1);
             printDir(currentDir);
             break;
         case '.exit':
