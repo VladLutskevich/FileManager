@@ -1,0 +1,18 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "File manager task",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladLutskevich/FileManager.git"
+  },
+  "author": "vladlutskevich",
+  "license": "ISC"
+}
