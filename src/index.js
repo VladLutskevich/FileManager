@@ -8,7 +8,8 @@ import { rn } from './rn.js';
 import { cp } from './cp.js';
 import { mv } from './mv.js';
 import { rm } from './rm.js';
-
+import { compress } from './compress.js';
+import { decompress } from './decompress.js';
 
 let currentDir;
 
@@ -54,6 +55,14 @@ const onInput = async (data) => {
             break;
         case 'rm':
             await rm(currentDir, arg1);
+            printDir(currentDir);
+            break;
+        case 'compress':
+            await compress(currentDir, arg1, arg2);
+            printDir(currentDir);
+            break;
+        case 'decompress':
+            await decompress(currentDir, arg1, arg2);
             printDir(currentDir);
             break;
         case '.exit':
